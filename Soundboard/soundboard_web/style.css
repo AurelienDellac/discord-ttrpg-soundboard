@@ -1,0 +1,119 @@
+html {
+    overflow-y: auto;
+}
+
+.button:hover {
+    border-color: #7d7d7d;
+}
+
+.button:focus {
+    border-color: black;
+}
+
+.button:focus:not(:active) {
+    box-shadow: 0 0 0 0.125em rgb(0 0 0 / 25%)
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("./media/background.jpg"), url("./media/background.png"), url("./media/background.gif");
+    background-repeat: repeat;
+    background-size: auto;    
+}
+
+.loading-screen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("./media/background.jpg"), url("./media/background.png"), url("./media/background.gif");
+    background-repeat: repeat;
+    background-size: auto;
+    z-index: 10;
+}
+
+.main-canvas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.loading {
+    display: none;
+}
+
+.card-header {
+    align-items: center;
+}
+
+.bot-card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.dropdown-trigger .button {
+    padding: 1rem 0.2rem 1rem 0.4rem;
+}
+
+.dropdown-content {
+    border: 0.1rem solid black;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-item .button {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.dropdown-item-icon {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.bot-card .card-content.bot-card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.8rem;
+    height: 100%;
+}
+
+.song-card {
+    direction: flex;
+    flex-direction: column;
+}
+
+.song-card .card-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 65vh;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.song-card .card-content .button {
+    margin: 0.2rem;
+}
+
+.bot-card .button.card-footer-item {
+    margin: 0.5rem 0.3rem;
+}
+
+.song-card {
+    margin: 0.5rem;
+}
+
+.hide {
+    visibility: hidden;
+}

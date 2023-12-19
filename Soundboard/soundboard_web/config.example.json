@@ -1,0 +1,40 @@
+{
+    "application" : {
+        "title" : "TTRPG ambient and music soundboard",
+        "_title_information": "If you change the title remember to update the batch file 4th line : SET soundboard_tile"
+    },
+    "music" : {
+        "songs" : {
+            "Category 1" : {
+                "Local song name 1" : "{song_folder}song_file.ext",
+                "Local song name 2"     : "{song_folder}song_file.ext",
+                "Local song name 3"     : "{song_folder}song_file.ext",
+                "Local song name 4"     : "{song_folder}song_file.ext",
+                "Local song name 5"     : "{song_folder}song_file.ext"
+            },
+            "Category 2" : {
+                "Youtube song name 1"   : "{youtube}song_url",
+                "Youtube song name 2"   : "{youtube}song_url",
+                "Youtube song name 3"   : "{youtube}song_url",
+                "Youtube song name 4"   : "{youtube}song_url",
+                "Youtube song name 5"   : "{youtube}song_url"
+            },
+            "Category 3" : {
+                "Local song name 1"     : "{song_folder}song_file.ext",
+                "Local song name 2"     : "{song_folder}song_file.ext",
+                "Youtube song name 1"   : "{youtube}song_url",
+                "Youtube song name 2"   : "{youtube}song_url"
+            }
+        }
+    },
+    "sound_effects" : {
+        "songs" : {
+            "Category 3" : {
+                "Local song name 1"     : "{song_folder}song_file.ext",
+                "Local song name 2"     : "{song_folder}song_file.ext",
+                "Youtube song name 1"   : "{youtube}song_url",
+                "Youtube song name 2"   : "{youtube}song_url"
+            }
+        }
+    }
+}
