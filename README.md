@@ -30,3 +30,11 @@ You can chose which music each bot plays by using the different buttons. The mus
 elhvzehlbvhzebvg
 
 ## Installation and configuration
+egfegez
+egfeg
+
+egfege
+
+
+egeg
+
