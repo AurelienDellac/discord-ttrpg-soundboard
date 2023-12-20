@@ -33,4 +33,4 @@ You can chose which sound each bot plays by using the different buttons. The sou
 
 ## Customization
 ### Managing sounds and categories
-The sounds are manage through a **config.json** file located in Soundboard/soundboard_web/. There should be a config.example.json to start with that you can rename config.json. In this file you have two main sections which are **music** and **sound_effects** and each have an inner section named **songs**. Do not change this labels if you don't want to affect the code.
+The sounds are manage through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `songs`. Do not change this labels if you don't want to affect the code. For each bot you habe to define at least one categorie to put the sounds in
