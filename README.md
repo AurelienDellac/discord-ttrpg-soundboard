@@ -14,7 +14,7 @@ When you launch the tool (a combination of batch, jar and python script) it open
 
 ![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/9b1cdc44-a963-47ed-b80f-c45f251bbec8)
 
-You can chose which music each bot plays by using the different buttons. The music can come from local storage or youtube as explain in [the customization section](###customization). Each bot have a a list of commands at the bottom of its body :
+You can chose which music each bot plays by using the different buttons. The music can come from local storage or youtube as explain in [the customization section](#customization). Each bot have a a list of commands at the bottom of its body :
 - Pause
 - Resume
 - Stop
