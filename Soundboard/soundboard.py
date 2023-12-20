@@ -7,8 +7,8 @@ from configobj import ConfigObj
 
 
 class Soundboard():
-    def __init__(self, bots, song_folder):
-        self.song_folder = song_folder
+    def __init__(self, bots, sound_folder):
+        self.sound_folder = sound_folder
         self.bots = {}
         for bot in bots:
             self.bots[bot.identifier] = bot
@@ -19,11 +19,11 @@ class Soundboard():
     def start_ui(self):
         self.eel.start("index.html")
     
-    def play_song(self, song_path, bot_identifier):
+    def play_sound(self, sound_path, bot_identifier):
         bot = self.bots[bot_identifier]
-        song_path = song_path.replace("{song_folder}", self.song_folder)
-        song_path = song_path.replace("{youtube}", "ytsearch: ")
-        asyncio.run_coroutine_threadsafe(bot.play_song_async(song_path), bot.loop).result()
+        sound_path = sound_path.replace("{sound_folder}", self.sound_folder)
+        sound_path = sound_path.replace("{youtube}", "ytsearch: ")
+        asyncio.run_coroutine_threadsafe(bot.play_sound_async(sound_path), bot.loop).result()
      
     def control_music(self, control, bot_identifier):
         bot = self.bots[bot_identifier]

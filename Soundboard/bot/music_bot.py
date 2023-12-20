@@ -74,8 +74,8 @@ class MusicBot(commands.Bot):
         if not msg.author.bot:
             await self.process_commands(msg)
             
-    async def play_song_async(self, song_path):
-        await self.get_cog("Music").play_async(song_path)
+    async def play_sound_async(self, sound_path):
+        await self.get_cog("Music").play_async(sound_path)
         
     async def control_music_async(self, control):
         music = self.get_cog("Music")

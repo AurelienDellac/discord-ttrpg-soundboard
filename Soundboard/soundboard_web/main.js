@@ -2,8 +2,8 @@ async function main() {
     $.getJSON('./config.json', data => {
         document.title = data.application.title;
 
-        build_song_cards(document.getElementById("music-card"), "music", data.music.songs);
-        build_song_cards(document.getElementById("sound-effects-card"), "sound_effects", data.sound_effects.songs);
+        build_sound_cards(document.getElementById("music-card"), "music", data.music.sounds);
+        build_sound_cards(document.getElementById("sound-effects-card"), "sound_effects", data.sound_effects.sounds);
     })
 
     load_background();
@@ -11,27 +11,27 @@ async function main() {
     await new Promise(r => setTimeout(r, 500));
     document.getElementsByClassName("loading-screen")[0].remove();
 }
-function build_song_cards(bot_card, bot_identifier, songs) {
+function build_sound_cards(bot_card, bot_identifier, sounds) {
     const content = bot_card.querySelector(".card-content");
     const dropdown_content = bot_card.querySelector(".dropdown-content");
 
-    Object.keys(songs).forEach(cat => {
-        add_songs_to_dropdown(cat, songs, bot_identifier, dropdown_content, content).click();
+    Object.keys(sounds).forEach(cat => {
+        add_sounds_to_dropdown(cat, sounds, bot_identifier, dropdown_content, content).click();
     });
 }
 
-function add_songs_to_dropdown(songs_key, songs, bot_identifier, dropdown_content, card_content) {
-    let el = document.getElementById("dropdown-song-template").cloneNode(true);
+function add_sounds_to_dropdown(sounds_key, sounds, bot_identifier, dropdown_content, card_content) {
+    let el = document.getElementById("dropdown-sound-template").cloneNode(true);
     el.id = "";
     el.classList.add("dropdown-item")
-    el.querySelector(".dropdown-item-label").innerHTML = songs_key;
+    el.querySelector(".dropdown-item-label").innerHTML = sounds_key;
     el.querySelector(".button").onclick = () => {
-        const song_card = card_content.querySelector(`#${get_songs_card_id(songs_key)}`);
-        if(song_card === null) {
-            add_songs_to_board(songs_key, songs, bot_identifier, card_content);
+        const sound_card = card_content.querySelector(`#${get_sounds_card_id(sounds_key)}`);
+        if(sound_card === null) {
+            add_sounds_to_board(sounds_key, sounds, bot_identifier, card_content);
             el.querySelector(".dropdown-item-icon").innerHTML = "visibility_off";
         } else {
-            remove_songs_from_board(song_card);
+            remove_sounds_from_board(sound_card);
             el.querySelector(".dropdown-item-icon").innerHTML = "visibility";
         }
     }
@@ -41,33 +41,33 @@ function add_songs_to_dropdown(songs_key, songs, bot_identifier, dropdown_conten
     return el.querySelector(".button");
 };
 
-function get_songs_card_id(songs_key) {
-    return songs_key.replace(' ', '_').toLowerCase();
+function get_sounds_card_id(sounds_key) {
+    return sounds_key.replace(' ', '_').toLowerCase();
 }
 
-function add_songs_to_board(songs_key, songs, bot_identifier, content) {
-    let song_card = document.getElementById("song-card-template").cloneNode(true);
-    song_card.id = get_songs_card_id(songs_key);
-    song_card.hidden = false;
-    song_card.querySelector(".card-header-title").innerHTML = songs_key;
-    song_card.querySelector(".card-header-icon").onclick = () => remove_songs_from_board(song_card);
+function add_sounds_to_board(sounds_key, sounds, bot_identifier, content) {
+    let sound_card = document.getElementById("sound-card-template").cloneNode(true);
+    sound_card.id = get_sounds_card_id(sounds_key);
+    sound_card.hidden = false;
+    sound_card.querySelector(".card-header-title").innerHTML = sounds_key;
+    sound_card.querySelector(".card-header-icon").onclick = () => remove_sounds_from_board(sound_card);
 
-    Object.keys(songs[songs_key]).forEach(song => {
+    Object.keys(sounds[sounds_key]).forEach(sound => {
         let btn = document.createElement("button");
         btn.className = "button"
-        btn.innerHTML = song;
+        btn.innerHTML = sound;
         btn.onclick = () => {
-            eel.play_song(songs[songs_key][song], bot_identifier);
+            eel.play_sound(sounds[sounds_key][sound], bot_identifier);
         };
 
-        song_card.querySelector(".card-content").appendChild(btn);
+        sound_card.querySelector(".card-content").appendChild(btn);
     })
 
-    content.appendChild(song_card);
+    content.appendChild(sound_card);
 }
 
-function remove_songs_from_board(song_card) {
-    song_card.remove();
+function remove_sounds_from_board(sound_card) {
+    sound_card.remove();
 }
 
 function toggle_dropdown(dropdown_id) {

@@ -32,7 +32,7 @@ def main():
     
     # Create the soundboard and expose the function to the Javascript part.
     soundboard = Soundboard([bot_music, bot_sound_effects], os.getenv("LOCAL_STORAGE_FOLDER"))
-    eel.expose(soundboard.play_song)
+    eel.expose(soundboard.play_sound)
     eel.expose(soundboard.control_music)
     
     # Create a thread to run the web interface.
