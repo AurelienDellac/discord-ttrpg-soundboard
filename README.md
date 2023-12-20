@@ -13,6 +13,14 @@ The tool consists of 2 Discord music bots and a soundboard displayed in a web vi
 
 The bots are hosted with python and a Lavalink server (version 3.7.8).
 
+### Download
+
+### Bots configuration
+
+### Environment configuration
+
+### Launching
+
 ## Use
 The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The bots cannot be controlled throught the discord chat except for joining and leaving a voice channel. The idea is to have two bots to manage simulteanously music/ambience and the sound effects. But you can use the two bots in the way you want even just one if you prefer (just kick the other one from the vocal). When you launch the tool (a combination of batch, jar and python script) it opens a Windows console and a webview. You can minimize the console you will probably have no use for it. The webview contain the soundboard.
 
@@ -36,7 +44,7 @@ You can chose which sound each bot plays by using the different buttons. The sou
 The sounds are manage through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `sounds`. Do not change this labels if you don't want to affect the code. For each bot you have to define at least one categorie to put the sounds but you can add as many categories as you want. You will just have to test how it display to ensure a good utilisation.
 
 To add a sound you have to precise its name (what display on the soundboard button) and its value. The value can be either :
-- a local file by precising the tag `{sound_folder}` before the file path.
-- a youtube link by precising the tag `{youtube}` before the vdeo link.
+- a local file by precising the tag `{sound_folder}` before the file path. See [installation section](#environment-configuration) to configure the local store folder.
+- a youtube link by precising the tag `{youtube}` before the video link.
 
 
