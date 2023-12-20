@@ -44,7 +44,43 @@ You can chose which sound each bot plays by using the different buttons. The sou
 The sounds are manage through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `sounds`. Do not change this labels if you don't want to affect the code. For each bot you have to define at least one categorie to put the sounds but you can add as many categories as you want. You will just have to test how it display to ensure a good utilisation.
 
 To add a sound you have to precise its name (what display on the soundboard button) and its value. The value can be either :
-- a local file by precising the tag `{sound_folder}` before the file path. See [installation section](#environment-configuration) to configure the local store folder.
+- a local file by precising the tag `{sound_folder}` before the file path. See [environment configuration](#environment-configuration) to configure the local store folder.
 - a youtube link by precising the tag `{youtube}` before the video link.
+
+```json
+"music" : {
+    "sounds" : {
+        "The Shire" : {
+            "Day"                 : "{sound_folder}the-shire.mp3",
+            "Night"               : "{sound_folder}the-shire-night.mp3",
+            "Northern moors"      : "{sound_folder}windy-nature.mp3",
+            "Inn"                 : "{sound_folder}the-shire-tavern.mp3",
+            "Suspense"            : "{sound_folder}suspense.mp3"
+        },
+        "Other ambiences" : {
+            "Waiting ambience (the witcher)"    : "{youtube}https://www.youtube.com/watch?v=zAAVbFToD10",
+            "Waiting ambience (LOTR)"		        : "{youtube}https://www.youtube.com/watch?v=IxQ6sBDoylQ",
+            "Fight"	    	                      : "{sound_folder}fight-low-level.mp3"
+        }
+    }
+},
+"sound_effects" : {
+    "sounds" : {
+        "Scenario effects" : {
+            "Door knocking"		          : "{sound_folder}se-door-knocking.mp3",
+            "Dogs"        	            : "{sound_folder}se-dogs-angry.mp3",
+            "River"        	            : "{sound_folder}river.mp3",
+            "A Elbereth Gilthoniel"     : "{sound_folder}elbereth-gilthoniel.mp3"
+        },
+        "General effect" : {
+            "Men/Women yelling"       : "{sound_folder}se-men-yelling.mp3",
+            "Arrow"	     	            : "{sound_folder}se-arrow-wood.mp3",
+            "Sword on shield"	     	  : "{sound_folder}se-sword-wood.mp3",
+            "Sword wound"	            : "{sound_folder}se-sword-bloody.mp3",
+            "Bloody sword wound"	    : "{sound_folder}se-sword-very-bloody.mp3"
+        }
+    }
+}
+```
 
 
