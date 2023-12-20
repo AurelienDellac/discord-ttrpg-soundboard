@@ -44,7 +44,7 @@ You can chose which sound each bot plays by using the different buttons. The sou
 The sounds are manage through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `sounds`. Do not change this labels if you don't want to affect the code. For each bot you have to define at least one categorie to put the sounds but you can add as many categories as you want. You will just have to test how it display to ensure a good utilisation.
 
 To add a sound you have to precise its name (what display on the soundboard button) and its value. The value can be either :
-- a local file by precising the tag `{sound_folder}` before the file path. See [environment configuration](#environment-configuration) to configure the local store folder.
+- a local file by precising the tag `{sound_folder}` before the file name.ext. See [environment configuration](#environment-configuration) to configure the local store folder.
 - a youtube link by precising the tag `{youtube}` before the video link.
 
 ```json
