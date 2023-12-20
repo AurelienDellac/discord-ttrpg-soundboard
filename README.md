@@ -59,25 +59,25 @@ To add a sound you have to precise its name (what display on the soundboard butt
         },
         "Other ambiences" : {
             "Waiting ambience (the witcher)"    : "{youtube}https://www.youtube.com/watch?v=zAAVbFToD10",
-            "Waiting ambience (LOTR)"		        : "{youtube}https://www.youtube.com/watch?v=IxQ6sBDoylQ",
-            "Fight"	    	                      : "{sound_folder}fight-low-level.mp3"
+            "Waiting ambience (LOTR)"           : "{youtube}https://www.youtube.com/watch?v=IxQ6sBDoylQ",
+            "Fight"                             : "{sound_folder}fight-low-level.mp3"
         }
     }
 },
 "sound_effects" : {
     "sounds" : {
         "Scenario effects" : {
-            "Door knocking"		          : "{sound_folder}se-door-knocking.mp3",
-            "Dogs"        	            : "{sound_folder}se-dogs-angry.mp3",
-            "River"        	            : "{sound_folder}river.mp3",
-            "A Elbereth Gilthoniel"     : "{sound_folder}elbereth-gilthoniel.mp3"
+            "Door knocking"            : "{sound_folder}se-door-knocking.mp3",
+            "Dogs"                     : "{sound_folder}se-dogs-angry.mp3",
+            "River"                    : "{sound_folder}river.mp3",
+            "A Elbereth Gilthoniel"    : "{sound_folder}elbereth-gilthoniel.mp3"
         },
         "General effect" : {
-            "Men/Women yelling"       : "{sound_folder}se-men-yelling.mp3",
-            "Arrow"	     	            : "{sound_folder}se-arrow-wood.mp3",
-            "Sword on shield"	     	  : "{sound_folder}se-sword-wood.mp3",
-            "Sword wound"	            : "{sound_folder}se-sword-bloody.mp3",
-            "Bloody sword wound"	    : "{sound_folder}se-sword-very-bloody.mp3"
+            "Men/Women yelling"     : "{sound_folder}se-men-yelling.mp3",
+            "Arrow"                 : "{sound_folder}se-arrow-wood.mp3",
+            "Sword on shield"       : "{sound_folder}se-sword-wood.mp3",
+            "Sword wound"           : "{sound_folder}se-sword-bloody.mp3",
+            "Bloody sword wound"    : "{sound_folder}se-sword-very-bloody.mp3"
         }
     }
 }
