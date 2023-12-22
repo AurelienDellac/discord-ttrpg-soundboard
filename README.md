@@ -31,7 +31,7 @@ When you launch the tool (a combination of batch, jar and python script) it open
 ![The tool console](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/df596735-2349-4ba0-982f-d1efec75f9db)
 ![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/c114ffbe-a0fa-43b5-b62d-e13f9e368f43)
 
-You can chose which sound each bot plays by using the different buttons. The sound can come from local storage files or youtube links as explain in [the customization section](#customization). Each bot have a a list of commands at the bottom of its body :
+The soundboard consists in two main sections corresponding to each bot and the sounds are dispatched in differents sub categories. You can chose which sound each bot plays by clicking on a sound button. The sounds can come from local storage files or youtube links as explain in [the customization section](#customization). Each bot have a a list of commands at the bottom of its body :
 - Pause
 - Resume
 - Stop
@@ -45,12 +45,14 @@ You can chose which sound each bot plays by using the different buttons. The sou
 
 ## Customization
 ### Managing sounds and categories
-The sounds are manage through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `sounds`. Do not change this labels if you don't want to affect the code. For each bot you have to define at least one categorie to put the sounds but you can add as many categories as you want. You will just have to test how it display to ensure a good utilisation.
+The sounds are managed through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `sounds`. Do not change this labels if you don't want to affect the code. For each bot you have to define at least one category to put the sounds in but you can add as many categories as you want. You will just have to test how it displays to ensure a good utilisation.
 
 To add a sound you have to precise its name (what display on the soundboard button) and its value. The value can be either :
 - a local file by precising the tag `{sound_folder}` before the file name and extension. See [environment configuration](#environment-configuration) to configure the local store folder.
 - a youtube link by precising the tag `{youtube}` before the video link.
 
+
+There is an example of my `config.json` file for a Lord of the Rings session using either local files and youtube videos :
 ```json
 "music" : {
     "sounds" : {
