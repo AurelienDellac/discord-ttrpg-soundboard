@@ -2,7 +2,7 @@
 A soundboard to manage music and ambience (from local storage or youtbe) during your discord TTRPG sessions. I have built this tool for my very own purpose so it is a bit shaky but I decided to share it if it can help someone. I know that some built-in or online solutions exist for this but sometimes nothing match exactly your needs so you have to get your hands dirty. You can use this tool as you want, copy it, fork it do as you want. If you do some improvments do no hesitate to share it whith me to ensure everybody can enjoy it. 
 
 ## General overview
-The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface.
+The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The interface should be responsive enough for every usage but it is not perfect (shaky I said!). 
 
 ![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/c114ffbe-a0fa-43b5-b62d-e13f9e368f43)
 
@@ -19,18 +19,20 @@ The bots are hosted with python and a Lavalink server (version 3.7.8).
 
 ### Environment configuration
 
-### Launching
+
 
 ## Use
 The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The bots cannot be controlled throught the discord chat except for joining and leaving a voice channel.
 
 The idea is to have two bots to manage simulteanously music/ambience and the sound effects. But you can use the two bots in the way you want even just one if you prefer (just kick the other one from the vocal).
 
+### Launching
 When you launch the tool (a combination of batch, jar and python script) it opens a Windows console and a webview. You can minimize the console you will probably have no use for it. The webview contain the soundboard.
 
 ![The tool console](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/df596735-2349-4ba0-982f-d1efec75f9db)
 ![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/c114ffbe-a0fa-43b5-b62d-e13f9e368f43)
 
+### Bots control
 The soundboard consists in two main sections corresponding to each bot and the sounds are dispatched in differents sub categories. You can chose which sound each bot plays by clicking on a sound button. The sounds can come from local storage files or youtube links as explain in [the customization section](#customization). Each bot have a a list of commands at the bottom of its body :
 - Pause
 - Resume
@@ -39,9 +41,12 @@ The soundboard consists in two main sections corresponding to each bot and the s
 - Lower volume
 - Increase volume
 - Switch on repeat one mode
-- Switch off repet one mode
+- Switch off repeat one mode
 
 ![Bot commands on the soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/873a97e5-f251-4331-9ecc-6b075ac372c2)
+
+### Hiding categories
+You can also hide a category by clicking on the top right corner eye icon. To show it back you can use the menu in the top right corner of the bot body. This menu can also be used to hide categories. Hiding categories can be useful for complex soundboards or for display issues.
 
 ## Customization
 ### Managing sounds and categories
@@ -89,4 +94,7 @@ There is an example of my `config.json` file for a Lord of the Rings session usi
 }
 ```
 
+### Background
+You can put any image in the background of the soundboard either ``.pnj``, ``.jpg`` or ``.gif``. The image will keep its size when put in the background so little images will be repeated and enormous images will be "zoomed". Personnaly I use a 1920x1080 of Rivendell as you can see in the example or in your soundboard as it is the default background. <ins>**I recommend using a JPG image**</ins> because there is an auto customization making the bot body header having a color based on the background (it's so fancy I love it lol).
 
+To change the background just put your image in the ``/Soundboard/soundboard_web/media`` folder and rename it ``background`` (no caps).
