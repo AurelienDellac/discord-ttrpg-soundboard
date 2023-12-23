@@ -2,12 +2,12 @@
 TITLE TTRPG SOUNDBOARD SERVER AND BOTS
 SET soundboard_title=TTRPG ambient and music soundboard
 
-cd "C:\Users\aurel\git\discord-ttrpg-soundboard\LavalinkServer"
+cd "LavalinkServer"
 START /b java -jar Lavalink.jar
 
 timeout /t 5 /nobreak > NUL
 
-cd "C:\Users\aurel\git\discord-ttrpg-soundboard\Soundboard"
+cd "Soundboard"
 START /b python main.py
 
 timeout /t 10 /nobreak > NUL
