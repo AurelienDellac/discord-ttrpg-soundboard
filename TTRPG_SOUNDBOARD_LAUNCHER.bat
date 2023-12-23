@@ -7,7 +7,7 @@ START /b java -jar Lavalink.jar
 
 timeout /t 5 /nobreak > NUL
 
-cd "Soundboard"
+cd "../Soundboard"
 START /b python main.py
 
 timeout /t 10 /nobreak > NUL
