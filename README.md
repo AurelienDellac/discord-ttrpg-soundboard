@@ -14,6 +14,7 @@ The tool consists of 2 Discord music bots and a soundboard displayed in a web vi
 The bots are hosted with python and a Lavalink server (version 3.7.8).
 
 ### Download
+To download the tool you can either clone the repository or download the soure code of the last [release](https://github.com/AurelienDellac/discord-ttrpg-soundboard/releases). If you use the second option, extract all the files from the downloaded archive.
 
 ### Bots configuration
 
