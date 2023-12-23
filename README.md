@@ -51,8 +51,20 @@ As explain the soundboard consist in two discord bots for music. So to configure
  Now that your two bots are setup you have to setup your environment so the Soundboard can start the bots and use them.
 
 ### Environment configuration
-To setup the environment you have to go to the Soundboard folder of the tool repertory. To ensure that you are in the right place there should be a ``main.py`` and a ``soundboard.py`` file. In this folder you have to create a ``.env`` file. To do that create a text document (.txt) named "txt". Open it in notepad and go to file, save as.  Name it ".env" and chose "all files" option in "Save as type" then save. Your ``.env`` file should have been created.
+To setup the environment you have to go to the Soundboard folder of the tool repertory. To ensure that you are in the right place there should be a ``main.py`` and a ``soundboard.py`` file. In this folder you have to create a ``.env`` file. To do that create a text document (.txt) named "txt". Open it in notepad and go to file, save as.  Name it ".env" and chose "all files" option in "Save as type" then save. Your ``.env`` file should have been created and you can delete the txt file.
 
+You can now open the ``.env`` file with notepad (or any IDE/code editor) and add the following lines :
+
+![.env file screenshot](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/b5c58fef-117d-431c-824b-28db17236238)
+
+There are 5 options in this file :
+- the token of the first bot - music bot ;
+- the token of the second bot - sound-effect bot ;
+- the prefix for the first bot commands in discord ;
+- the prefix of the second bot commands in discord ;
+- the absolute path to the folder where the soundboard will search for local files (see [managing sounds](#managing-sounds-and-categories) for more information)
+
+You can configure the last three options as you want. For the bots tokens go to your discord developper application page. The token can be found in the bot section of each application by clicking on ``reset token``. Then paste each token in the corresponding option.
 
 ## Use
 The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The bots cannot be controlled throught the discord chat except for joining and leaving a voice channel.
