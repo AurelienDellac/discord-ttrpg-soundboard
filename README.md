@@ -2,9 +2,10 @@
 A soundboard to manage music and ambience (from local storage or youtbe) during your discord TTRPG sessions. I have built this tool for my very own purpose so it is a bit shaky but I decided to share it if it can help someone. I know that some built-in or online solutions exist for this but sometimes nothing match exactly your needs so you have to get your hands dirty. You can use this tool as you want, copy it, fork it do as you want. If you do some improvments do no hesitate to share it whith me to ensure everybody can enjoy it. 
 
 ## General overview
-The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface.
+The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The interface should be responsive enough for every usage but it is not perfect (shaky I said!). 
 
-![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/9b1cdc44-a963-47ed-b80f-c45f251bbec8)
+![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/c114ffbe-a0fa-43b5-b62d-e13f9e368f43)
+
 
 ## Installation and configuration
 ### Technical aspects
@@ -12,14 +13,28 @@ The tool consists of 2 Discord music bots and a soundboard displayed in a web vi
 
 The bots are hosted with python and a Lavalink server (version 3.7.8).
 
+### Download
+To download the tool you can either clone the repository or download the soure code of the last [release](https://github.com/AurelienDellac/discord-ttrpg-soundboard/releases). If you use the second option, extract all the files from the downloaded archive.
+
+### Bots configuration
+
+### Environment configuration
+
+
+
 ## Use
-The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The bots cannot be controlled throught the discord chat except for joining and leaving a voice channel. The idea is to have two bots to manage simulteanously music/ambience and the sound effects. But you can use the two bots in the way you want even just one if you prefer (just kick the other one from the vocal). When you launch the tool (a combination of batch, jar and python script) it opens a Windows console and a webview. You can minimize the console you will probably have no use for it. The webview contain the soundboard.
+The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The bots cannot be controlled throught the discord chat except for joining and leaving a voice channel.
 
-![The tool console](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/2e7629c4-a616-43ff-a757-dfd68bbac7ec)
+The idea is to have two bots to manage simulteanously music/ambience and the sound effects. But you can use the two bots in the way you want even just one if you prefer (just kick the other one from the vocal).
 
-![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/9b1cdc44-a963-47ed-b80f-c45f251bbec8)
+### Launching
+When you launch the tool (a combination of batch, jar and python script) it opens a Windows console and a webview. You can minimize the console you will probably have no use for it. The webview contain the soundboard.
 
-You can chose which sound each bot plays by using the different buttons. The sound can come from local storage files or youtube links as explain in [the customization section](#customization). Each bot have a a list of commands at the bottom of its body :
+![The tool console](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/df596735-2349-4ba0-982f-d1efec75f9db)
+![The soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/c114ffbe-a0fa-43b5-b62d-e13f9e368f43)
+
+### Bots control
+The soundboard consists in two main sections corresponding to each bot and the sounds are dispatched in differents sub categories. You can chose which sound each bot plays by clicking on a sound button. The sounds can come from local storage files or youtube links as explain in [the customization section](#customization). Each bot have a a list of commands at the bottom of its body :
 - Pause
 - Resume
 - Stop
@@ -27,10 +42,60 @@ You can chose which sound each bot plays by using the different buttons. The sou
 - Lower volume
 - Increase volume
 - Switch on repeat one mode
-- Switch off repet one mode
+- Switch off repeat one mode
 
 ![Bot commands on the soundboard](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/873a97e5-f251-4331-9ecc-6b075ac372c2)
 
+### Hiding categories
+You can also hide a category by clicking on the top right corner eye icon. To show it back you can use the menu in the top right corner of the bot body. This menu can also be used to hide categories. Hiding categories can be useful for complex soundboards or for display issues.
+
 ## Customization
 ### Managing sounds and categories
-The sounds are manage through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `songs`. Do not change this labels if you don't want to affect the code. For each bot you habe to define at least one categorie to put the sounds in
+The sounds are managed through a `config.json` file located in Soundboard/soundboard_web/. There should be a `config.example.json` to start with that you can rename `config.json`. In this file you have two main sections which are `music` and `sound_effects` and each have an inner section named `sounds`. Do not change this labels if you don't want to affect the code. For each bot you have to define at least one category to put the sounds in but you can add as many categories as you want. You will just have to test how it displays to ensure a good utilisation.
+
+To add a sound you have to precise its name (what display on the soundboard button) and its value. The value can be either :
+- a local file by precising the tag `{sound_folder}` before the file name and extension. See [environment configuration](#environment-configuration) to configure the local store folder.
+- a youtube link by precising the tag `{youtube}` before the video link.
+
+
+There is an example of my `config.json` file for a Lord of the Rings session using either local files and youtube videos :
+```json
+"music" : {
+    "sounds" : {
+        "The Shire" : {
+            "Day"                 : "{sound_folder}the-shire.mp3",
+            "Night"               : "{sound_folder}the-shire-night.mp3",
+            "Northern moors"      : "{sound_folder}windy-nature.mp3",
+            "Inn"                 : "{sound_folder}the-shire-tavern.mp3",
+            "Suspense"            : "{sound_folder}suspense.mp3"
+        },
+        "Other ambiences" : {
+            "Waiting ambience (the witcher)"    : "{youtube}https://www.youtube.com/watch?v=zAAVbFToD10",
+            "Waiting ambience (LOTR)"           : "{youtube}https://www.youtube.com/watch?v=IxQ6sBDoylQ",
+            "Fight"                             : "{sound_folder}fight-low-level.mp3"
+        }
+    }
+},
+"sound_effects" : {
+    "sounds" : {
+        "Scenario effects" : {
+            "Door knocking"            : "{sound_folder}se-door-knocking.mp3",
+            "Dogs"                     : "{sound_folder}se-dogs-angry.mp3",
+            "River"                    : "{sound_folder}river.mp3",
+            "A Elbereth Gilthoniel"    : "{sound_folder}elbereth-gilthoniel.mp3"
+        },
+        "General effect" : {
+            "Men/Women yelling"     : "{sound_folder}se-men-yelling.mp3",
+            "Arrow"                 : "{sound_folder}se-arrow-wood.mp3",
+            "Sword on shield"       : "{sound_folder}se-sword-wood.mp3",
+            "Sword wound"           : "{sound_folder}se-sword-bloody.mp3",
+            "Bloody sword wound"    : "{sound_folder}se-sword-very-bloody.mp3"
+        }
+    }
+}
+```
+
+### Background
+You can put any image in the background of the soundboard either ``.pnj``, ``.jpg`` or ``.gif``. The image will keep its size when put in the background so little images will be repeated and enormous images will be "zoomed". Personnaly I use a 1920x1080 of Rivendell as you can see in the example or in your soundboard as it is the default background. <ins>**I recommend using a JPG image**</ins> because there is an auto customization making the bot body header having a color based on the background (it's so fancy I love it lol).
+
+To change the background just put your image in the ``/Soundboard/soundboard_web/media`` folder and rename it ``background`` (no caps).
