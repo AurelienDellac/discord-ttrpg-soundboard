@@ -14,12 +14,44 @@ The tool consists of 2 Discord music bots and a soundboard displayed in a web vi
 The bots are hosted with python and a Lavalink server (version 3.7.8).
 
 ### Download
-To download the tool you can either clone the repository or download the soure code of the last [release](https://github.com/AurelienDellac/discord-ttrpg-soundboard/releases). If you use the second option, extract all the files from the downloaded archive.
+To download the tool you can either clone the repository or download the soure code of the last [release](https://github.com/AurelienDellac/discord-ttrpg-soundboard/releases). If you use the second option, extract all the files from the downloaded archive. Once you have dowloaded the tool you can try to launch it. To facilitate this step I wrote a batch file managing the start of the different components. So you can just execute the file ``TTRPG_SOUNDBOARD_LAUNCHER.bat`` and the Soundboard should open as describe in [launching section](#launching). It is currently empty but the next step is to configure the bots.
 
 ### Bots configuration
+As explain the soundboard consist in two discord bots for music. So to configure the soundboard you have to setup and configure these two bots. For those who don't know how it works I will explain all but the others can skip to the next step.
+
+1. Developper portal
+   - Go to the discord developper portal [application page](https://discord.com/developers/applications).
+   - Login if not.
+2. Register a bot (you will have to repeat this step for the second bot)
+   - Create a new application (top right button) and name it (you can name the bot music and sound-effect for example) :
+     
+     ![screenshot](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/dd2f8eda-ca2b-4572-8f2e-380678374155)
+
+   - Custom the general information and the bot image if you want.
+   - Go to the ``Bot`` section on the left.
+   - Scroll down to the ``Privileged Gateway Intents`` section
+   - Accept the three intents and save changes :
+     
+     ![screenshot](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/f1c8ff09-67b6-4c57-a4e2-1deec4a74438)
+
+   - Your bot is now setup repeat the operation for the second one.
+3. Invite the bots to your discord server
+   - Got to the ``OAuth2 --> URL Generator`` section on the left.
+   - Chose the ``bot`` scope.
+   - Select ``send messages``, ``send messages in threads``, ``connect`` and ``speak`` permissions :
+
+     ![screenshot](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/3ad6e9bc-5f1f-41e7-ae05-6532b9119a39)
+     
+   - Copy the generated url at the bottom of the page.
+   - Paste the link in your web browser.
+   - Chose the server where you want to add the bot and validate all next steps.
+   - Your bot should have been added to your server ! Repeat the operation for the second bot.
+     
+<br/>
+ Now that your two bots are setup you have to setup your environment so the Soundboard can start the bots and use them.
 
 ### Environment configuration
-
+To setup the environment you have to go to the Soundboard folder of the tool repertory. To ensure that you are in the right place there should be a ``main.py`` and a ``soundboard.py`` file. In this folder you have to create a ``.env`` file. To do that create a text document (.txt) named "txt". Open it in notepad and go to file, save as.  Name it ".env" and chose "all files" option in "Save as type" then save. Your ``.env`` file should have been created.
 
 
 ## Use
