@@ -55,7 +55,13 @@ To setup the environment you have to go to the Soundboard folder of the tool rep
 
 You can now open the ``.env`` file with notepad (or any IDE/code editor) and add the following lines :
 
-![.env file screenshot](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/b5c58fef-117d-431c-824b-28db17236238)
+```env
+DISCORD_BOT_MUSIC_TOKEN=
+DISCORD_BOT_SE_TOKEN=
+DISCORD_BOT_MUSIC_PREFIX=;;
+DISCORD_BOT_SE_PREFIX=;;
+LOCAL_STORAGE_FOLDER=absolute/path/to/folder/
+```
 
 There are 5 options in this file :
 - the token of the first bot - music bot ;
@@ -65,6 +71,11 @@ There are 5 options in this file :
 - the absolute path to the folder where the soundboard will search for local files (see [managing sounds](#managing-sounds-and-categories) for more information)
 
 You can configure the last three options as you want. For the bots tokens go to your discord developper application page. The token can be found in the bot section of each application by clicking on ``reset token``. Then paste each token in the corresponding option.
+
+You can now lauching the tool by executing the batch file and the bots should now be online in your discord server.
+
+### Better launcher and shortcut
+WIP
 
 ## Use
 The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The bots cannot be controlled throught the discord chat except for joining and leaving a voice channel.
@@ -92,6 +103,9 @@ The soundboard consists in two main sections corresponding to each bot and the s
 
 ### Hiding categories
 You can also hide a category by clicking on the top right corner eye icon. To show it back you can use the menu in the top right corner of the bot body. This menu can also be used to hide categories. Hiding categories can be useful for complex soundboards or for display issues.
+
+### Closing
+WIP
 
 ## Customization
 ### Managing sounds and categories
@@ -143,3 +157,6 @@ There is an example of my `config.json` file for a Lord of the Rings session usi
 You can put any image in the background of the soundboard either ``.pnj``, ``.jpg`` or ``.gif``. The image will keep its size when put in the background so little images will be repeated and enormous images will be "zoomed". Personnaly I use a 1920x1080 of Rivendell as you can see in the example or in your soundboard as it is the default background. <ins>**I recommend using a JPG image**</ins> because there is an auto customization making the bot body header having a color based on the background (it's so fancy I love it lol).
 
 To change the background just put your image in the ``/Soundboard/soundboard_web/media`` folder and rename it ``background`` (no caps).
+
+### Title
+WIP
