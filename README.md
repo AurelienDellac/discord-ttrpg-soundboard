@@ -1,4 +1,6 @@
 # DISCORD TTRPG SOUNDBOARD & BOTS
+Contact me on discord if needed : [invitation link](https://discord.gg/GGC4Jsc3pD).
+
 A soundboard to manage music and ambience (from local storage or youtbe) during your discord TTRPG sessions. I have built this tool for my very own purpose so it is a bit shaky but I decided to share it if it can help someone. I know that some built-in or online solutions exist for this but sometimes nothing match exactly your needs so you have to get your hands dirty. You can use this tool as you want, copy it, fork it do as you want. If you do some improvments do no hesitate to share it whith me to ensure everybody can enjoy it. 
 
 ## General overview
