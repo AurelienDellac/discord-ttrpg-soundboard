@@ -77,7 +77,13 @@ You can configure the last three options as you want. For the bots tokens go to 
 You can now lauching the tool by executing the batch file and the bots should now be online in your discord server.
 
 ### Better launcher and shortcut
-WIP
+There is a way more convenient way to start the soundboard. You can generate an `.exe` of the launcher batch file and the create a shortcut that you can pin to start (or wherever you want) with any icon you want. To do that you have to open (with notepad for example) the `TTRPG_SOUNDBOARD_LAUNCHER.bat` file and modify the two lines squared in red in the image below.
+
+![batch screenshot](https://github.com/AurelienDellac/discord-ttrpg-soundboard/assets/33094417/0439d219-6086-4e78-86ca-b3643c83bbba)
+
+Change the relative path to the folders by the absolute path so that the the future exe file can found the folders from anywhere. So replace `LavalinkServer` by `Disk:\absolute\path\to\LavalinkServer` and `../Soundboard` by `Disk:\absolute\path\to\Soundboard`. You can then just drag and drop yout batch file onto the second batch file of the project : `bat2exe.bat`. It will create an exe file base on the batch file. From this exe file you can create a shortcut with a fancy icon (the one in Soundboard/resources/soundboard.ico for example) and finally pin it to start to launch it easily whenever you want.
+
+
 
 ## Use
 The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots throught the interface. The bots cannot be controlled throught the discord chat except for joining and leaving a voice channel.
