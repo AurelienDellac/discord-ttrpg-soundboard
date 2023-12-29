@@ -113,7 +113,7 @@ The soundboard consists in two main sections corresponding to each bot and the s
 You can also hide a category by clicking on the top right corner eye icon. To show it back you can use the menu in the top right corner of the bot body. This menu can also be used to hide categories. Hiding categories can be useful for complex soundboards or for display issues.
 
 ### Closing
-WIP
+To close the Soundboard you have to close both windows : the webview and the console. If you close the console, the webview will stay open but the tool will be completely shutdown because the console controls the bot and the server. If you close the webview, beacause of the batch the console should be close itself in the next 10s and you will be good.
 
 ## Customization
 ### Managing sounds and categories
@@ -167,4 +167,4 @@ You can put any image in the background of the soundboard either ``.pnj``, ``.jp
 To change the background just put your image in the ``/Soundboard/soundboard_web/media`` folder and rename it ``background`` (no caps).
 
 ### Title
-WIP
+You can modify the title of the webview if you want. To do that you have to open the `config.json` and modify the `title` value in `application` section. Be careful, if you do that you have to modify the batch as describe in the `config.json` in `_title_information` value.
