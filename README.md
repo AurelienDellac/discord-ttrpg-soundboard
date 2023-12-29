@@ -13,7 +13,7 @@ The tool consists of 2 Discord music bots and a soundboard displayed in a web vi
 ### Technical aspects
 The tool consists of 2 Discord music bots and a soundboard displayed in a web view. The soundboard allow you to control the music played by the bots through the interface. The bots cannot be controlled through the discord chat except for joining and leaving a voice channel. The idea is to have two bots to manage simultaneously music/ambience and the sound effects. But you can use the two bots in the way you want even just one if you prefer (just kick the other one from the vocal).
 
-The bots are hosted with python and a Lavalink server (version 3.7.8).
+The bots are hosted with python and a [Lavalink](https://github.com/lavalink-devs/Lavalink) server (version 3.7.8).
 
 ### Download
 To download the tool you can either clone the repository or download the source code of the last [release](https://github.com/AurelienDellac/discord-ttrpg-soundboard/releases). If you use the second option, extract all the files from the downloaded archive. Once you have downloaded the tool you can try to launch it. To facilitate this step I wrote a batch file managing the start of the different components. So you can just execute the file ``TTRPG_SOUNDBOARD_LAUNCHER.bat`` and the Soundboard should open as describe in [launching section](#launching). It is currently empty, but the next step is to configure the bots.
