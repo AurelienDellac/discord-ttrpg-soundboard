@@ -1,6 +1,7 @@
 import asyncio
 import tkinter as tk
 from functools import partial
+import os
 
 import eel
 from configobj import ConfigObj
@@ -14,7 +15,7 @@ class Soundboard():
             self.bots[bot.identifier] = bot
         
         self.eel = eel
-        eel.init('soundboard_web')
+        eel.init(os.path.dirname(__file__) + './soundboard_web')
         
     def start_ui(self):
         self.eel.start("index.html")
